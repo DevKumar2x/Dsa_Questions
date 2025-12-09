@@ -12,3 +12,11 @@ a , b = 10 , 20
 x , y = 30 , 40
 print (f"(a, b) = {swap(a, b)}")
 print (f"(x, y) = {swap(x, y)}")
+
+
+
+# Q2. import calender module and use it to print the calender of given year and month.
+import calendar
+yy = 2025
+mm = 8
+print(calendar.month(yy,mm))
