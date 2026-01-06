@@ -1,3 +1,5 @@
+/*
+
 //Q1.
 // There is a large pile of socks that must be paired by color.
 // Given an array of integers representing the color of each sock, 
@@ -411,6 +413,45 @@ int main() {
     }
 }
 
+*/
 
+// Q12. 
+// Maximum Subarray Sum Problem - calculate the sum of all possible subarrays and return the maximum sum among them.
+#include<iostream>
+#include<vector>
+using namespace std;
+// Print all sub-arrays of a vector function
+void Print_subarray(vector<int> nums , int n){
+    for(int st=0 ; st<n ; st++){
+        for(int end=st ; end<n ; end++){
+            for(int i=st ; i<=end ; i++){
+                cout << nums[i];
+            }
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+// Brute force approach
+int MaxSubarraySum(vector<int> nums , int n){
+    int maxSum = 0;
+    for(int i=0 ; i<n ; i++){
+        int currSum = 0;
+        for(int j=i ; j<n ; j++){
+            currSum = currSum + nums[j];
+            maxSum = max(maxSum , currSum);
+        }
+    }
+    return maxSum;
+}
+int main(){
+    vector<int> nums = {1, 2, -3, 4, 5};
+    int n = nums.size();
+
+    int ans = MaxSubarraySum(nums , n); //max sum
+    cout << ans << endl;
+
+    return 0;
+}
 
 
