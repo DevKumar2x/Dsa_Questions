@@ -417,11 +417,12 @@ int main() {
 
 // Q12. 
 // Maximum Subarray Sum Problem - calculate the sum of all possible subarrays and return the maximum sum among them.
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
+#include <climits>
 using namespace std;
 // Print all sub-arrays of a vector function
-void Print_subarray(vector<int> nums , int n){
+void Print_subarray(vector<int>& nums , int n){
     for(int st=0 ; st<n ; st++){
         for(int end=st ; end<n ; end++){
             for(int i=st ; i<=end ; i++){
@@ -433,22 +434,34 @@ void Print_subarray(vector<int> nums , int n){
     }
 }
 // Brute force approach
-int MaxSubarraySum(vector<int> nums , int n){
-    int maxSum = 0;
-    for(int i=0 ; i<n ; i++){
+int max_sum(vector<int>& nums , int n){
+    int maxSum = INT_MIN;
+    for(int st=0 ; st<n ; st++){
         int currSum = 0;
-        for(int j=i ; j<n ; j++){
-            currSum = currSum + nums[j];
+        for(int end=st ; end<n ; end++){
+            currSum += nums[end];
             maxSum = max(maxSum , currSum);
         }
     }
     return maxSum;
 }
+// Kadane's Algorithm
+int max_Sum(vector<int>& nums , int n){
+    int maxSum = INT_MIN , currSum = 0;
+    for(int i=0 ; i<n ; i++){
+        currSum += nums[i];
+        maxSum = max(maxSum , currSum);
+        if(currSum < 0){
+            currSum = 0;
+        }
+    }
+    return maxSum;
+}
 int main(){
-    vector<int> nums = {1, 2, -3, 4, 5};
+    vector<int> nums = {-1, -2, -3, -4, -5};
     int n = nums.size();
 
-    int ans = MaxSubarraySum(nums , n); //max sum
+    int ans = max_Sum(nums , n); //max subarray sum
     cout << ans << endl;
 
     return 0;
