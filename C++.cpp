@@ -1,5 +1,4 @@
-
-
+/*
 //Q1.
 // There is a large pile of socks that must be paired by color.
 // Given an array of integers representing the color of each sock, 
@@ -46,9 +45,9 @@ int main() {
     cout << "pairs = " << sockMerchant(n, ar) << endl;
     return 0;
 }
+*/
 
-
-
+/*
 //Q2.
 // Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
 // Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
@@ -81,9 +80,9 @@ int main(){
     cout << "24 hour time = " << ans << endl;
     return 0;
 }
+*/
 
-
-
+/*
 //Q3.
 // Nina received an odd New Year's present from a student: a set of  unbreakable sticks.
 // Each stick has a length, l ,and the length of the ith stick is (l)i-1.
@@ -119,9 +118,9 @@ int main(){
     cout << "Number of ways to form a square = " << ans << endl;
     return 0;
 }
+*/
 
-
-
+/*
 //Q4.
 //John Watson knows of an operation called a right circular rotation on an array of integers.
 //One rotation operation moves the last array element to the first position and shifts all remaining elements right one.
@@ -163,8 +162,9 @@ int main() {
     }
     return 0;
 }
+*/
 
-
+/*
 // Q5.
 // You are given an integer, . Write a program to determine if  is an element of the Fibonacci sequence.
 // The first few elements of the Fibonacci sequence are . A Fibonacci sequence is one where every element
@@ -194,9 +194,9 @@ int main() {
     }
     return 0;
 }
+*/
 
-
-
+/*
 //Q6.
 //Rotate the vector array by k times to the left and print the rotated final vector array:---------------
 #include<iostream>
@@ -219,7 +219,7 @@ int main(){
     }
     return 0;
 }
-
+*/
 
 
 
@@ -229,7 +229,7 @@ int main(){
 
 
 
-
+/*
 // Q8.
 // An arcade game player wants to climb to the top of the leaderboard and track their ranking.
 // The game uses Dense Ranking, so its leaderboard works like this:
@@ -287,9 +287,9 @@ int main(){
     }
     return 0;
 }
+*/
 
-
-
+/*
 // Q9.
 // The factorial of the integer n, written n!, is defined as:  n! = n x (n - 1) x (n - 2) x ... x 1
 // Calculate and print the factorial of a given integer.
@@ -326,8 +326,9 @@ int main(){
     factorial(n);
     return 0;
 }
+*/
 
-
+/*
 // Q10.
 // A 3 x 3 magic square is a 3 x 3 grid filled with distinct integers from 1 to 9 such that each cell contains a different integer and the sum of the integers in each row, column, and both main diagonals is the same.
 // You will be given a 3 x 3 matrix of integers in the inclusive range [1, 9].
@@ -378,8 +379,9 @@ int main() {
     cout << result << endl;
     return 0;
 }
+*/
 
-
+/*
 // Q11.
 // Larry has been given a permutation of a sequence of natural numbers incrementing from 1 to n.
 // He must determine whether the array can be sorted using the following operation any number of times:
@@ -412,8 +414,9 @@ int main() {
         cout << larrysArray(A) << "\n";
     }
 }
+*/
 
-
+/*
 // Q12. 
 // Maximum Subarray Sum Problem - calculate the sum of all possible subarrays and return the maximum sum among them.
 // Note : Try to Solve in linear time complexity.
@@ -466,8 +469,9 @@ int main(){
 
     return 0;
 }
+*/
 
-
+/*
 // Q13.
 // Pair sum - return pair of index whose elements sum is equals to the target. 
 // Note : given array or vector is sorted.
@@ -504,8 +508,9 @@ int main(){
     
     return 0;
 }
+*/
 
-
+/*
 // Q14.
 // Majority element - find majority element in a vector or an array.
 // majority element is the element which occurs more than (size/2) times in an array or a vector.
@@ -559,6 +564,6 @@ int main(){
 
     return 0;
 }
-
+*/
 
 // Q15.          ...to be added soon...
