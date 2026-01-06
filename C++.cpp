@@ -1,5 +1,3 @@
-/*
-
 //Q1.
 // There is a large pile of socks that must be paired by color.
 // Given an array of integers representing the color of each sock, 
@@ -413,10 +411,10 @@ int main() {
     }
 }
 
-*/
 
 // Q12. 
 // Maximum Subarray Sum Problem - calculate the sum of all possible subarrays and return the maximum sum among them.
+// Note : Try to Solve in linear time complexity.
 #include <iostream>
 #include <vector>
 #include <climits>
@@ -464,6 +462,43 @@ int main(){
     int ans = max_Sum(nums , n); //max subarray sum
     cout << ans << endl;
 
+    return 0;
+}
+
+
+// Q13.
+// Pair sum - return pair of index whose elements sum is equals to the target. 
+// Note : given array or vector is sorted.
+
+#include <iostream>
+#include <vector>
+using namespace std;
+vector<int> pairsum(vector<int>& nums , int n , int tar){
+    int st=0 , end = n-1;
+    vector<int> ans;
+
+    while(st < end){
+        if(nums[st] + nums[end] == tar){
+            ans.push_back(st);
+            ans.push_back(end);
+            return ans;
+        }
+        else if(nums[st] + nums[end] > tar){
+            end--;
+        }
+        else{
+            st++;
+        }
+    }
+}
+int main(){
+    vector<int> nums = {1, 2, 5, 7, 9};
+    int n = nums.size();
+    int tar = 9;
+
+    vector<int> ans = pairsum(nums , n , tar);
+    cout << "index pair : (" << ans[0] << "," << ans[1] << ")";
+    
     return 0;
 }
 
