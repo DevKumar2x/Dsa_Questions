@@ -1,3 +1,5 @@
+
+
 //Q1.
 // There is a large pile of socks that must be paired by color.
 // Given an array of integers representing the color of each sock, 
@@ -469,6 +471,7 @@ int main(){
 // Q13.
 // Pair sum - return pair of index whose elements sum is equals to the target. 
 // Note : given array or vector is sorted.
+// we return pair in form of a vector of size Two.
 
 #include <iostream>
 #include <vector>
@@ -503,3 +506,59 @@ int main(){
 }
 
 
+// Q14.
+// Majority element - find majority element in a vector or an array.
+// majority element is the element which occurs more than (size/2) times in an array or a vector.
+// Or you can say - element with maximum occurance.
+// given : answer always exist.
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+// T(n) = O(nlogn) 
+int majority_ele(vector<int>& nums , int n){
+    //sort
+    sort(nums.begin() , nums.end());
+    //loop
+    int freq = 1 , ans = nums[0];
+    for(int i=1 ; i<n ; i++){
+        if(nums[i] == nums[i-1]){
+            freq++;
+        }else{
+            freq = 1;
+            ans = nums[i];
+        }
+
+        if(freq > n/2){
+            return ans;
+        }
+    }
+    return -1; // never executed
+}
+// Moore's voting algorithm   ,      T(n) = O(n)
+int Majority_ele(vector<int>&nums , int n){
+    int freq = 0 , ans = 0;
+    for(int i=0 ; i<n ; i++){
+        if (freq == 0){
+            ans = nums[i];
+        }
+        if(nums[i] == ans){
+            freq++;
+        }else{
+            freq--;
+        }
+    }
+    return ans;
+}
+int main(){
+    vector<int> nums = {1, 2, 2, 2, 2, 1, 2, 4, 4};
+    int n = nums.size();
+
+    int ans = Majority_ele(nums , n);
+    cout << ans << endl;
+
+    return 0;
+}
+
+
+// Q15.          ...to be added soon...
